@@ -1806,7 +1806,8 @@ MonoBehaviour:
   objCanvas: {fileID: 773833366}
   textSay: {fileID: 232820028}
   soundSay: {fileID: 8300000, guid: ceb9ee45a77800141b5bc9fffc02d704, type: 3}
-  soundspeed: 500
+  soundspeed: 1
+  END: {fileID: 540404784}
 --- !u!70 &1335407743
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2934,7 +2935,7 @@ GameObject:
   m_Layer: 0
   m_Name: CHECK
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

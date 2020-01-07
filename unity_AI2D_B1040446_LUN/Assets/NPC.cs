@@ -36,6 +36,8 @@ public class NPC : MonoBehaviour
     private AudioSource aud;
     internal static NPC score;
 
+    public GameObject END;
+
     private void Start()
     {
         aud = GetComponent<AudioSource>();
@@ -72,6 +74,8 @@ public class NPC : MonoBehaviour
         if (countPlayer >= countFinish)
         {
             _state = state.complete;
+
+            Invoke("End", 4f);
         }
 
         //文字介面.文字 = 對話1
@@ -117,6 +121,11 @@ public class NPC : MonoBehaviour
     public void PlayerGet()
     {
         countPlayer++;
+    }
+
+    void End()
+    {
+        END.SetActive(true);
     }
 }
 
