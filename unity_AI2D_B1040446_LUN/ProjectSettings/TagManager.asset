@@ -7,6 +7,7 @@ TagManager:
   - e04
   - "\u91D1\u5E63"
   - "\u58A8\u83F2\u7279"
+  - die
   layers:
   - Default
   - TransparentFX

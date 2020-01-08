@@ -57,6 +57,16 @@ public class e04 : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "die")
+        {
+            END.SetActive(true);
+
+            Destroy(this);
+        }
+    }
+
     /// <summary>
     /// 走路
     /// </summary>
