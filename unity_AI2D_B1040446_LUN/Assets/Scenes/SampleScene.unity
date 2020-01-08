@@ -1862,7 +1862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  jump: 550
+  jump: 600
   pass: 0
   isGround: 0
   hp: 100
