@@ -24,6 +24,12 @@ public class 敵人 : MonoBehaviour
     #endregion
 
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(checkPoint.position, -checkPoint.up * 1.5f);
+    }
+
     //持續觸發
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -49,6 +55,13 @@ public class 敵人 : MonoBehaviour
     {
         //r2d.AddForce(new Vector2(-speed, 0));
         r2d.AddForce(-transform.right * speed);   // 區域座標 2D transform.right 右邊、transform.up 上方
+
+        RaycastHit2D hit = Physics2D.Raycast(checkPoint.position, -checkPoint.up, 1.5f, 1 << 8);
+
+        if (hit == false)
+        {
+            transform.eulerAngles += new Vector3(0, 180, 0);
+        }
     }
 
     /// <summary>
